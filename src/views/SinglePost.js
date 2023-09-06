@@ -8,7 +8,7 @@ export default function SinglePost() {
     const {userInfo} = useContext(UserContext);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/post/${id}`)
+        fetch(`https://crud-miniwebproject-7340dd192120.herokuapp.com/post/${id}`)
             .then(response => {
                 response.json().then(postInfo => {
                     setPostInfo(postInfo)
@@ -31,7 +31,7 @@ export default function SinglePost() {
                 )}
                 </div>
             </div>
-            <img className="object-contain py-3"src={`http://localhost:5000/${postInfo.cover}`} alt="" />
+            <img className="object-contain py-3"src={`https://crud-miniwebproject-7340dd192120.herokuapp.com/${postInfo.cover}`} alt="" />
             <div className="flex flex-row justify-between border-b-2">
                 <p className="text-lg font-semibold">{postInfo.summary}</p>
                 <p>{postInfo.author.username}</p>

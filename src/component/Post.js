@@ -8,7 +8,7 @@ export default function Post({ _id,title, summary, cover, content, createdAt, au
       <h3 className="font-semibold"> {title}</h3>
       </Link>
       <Link to={`/post/${_id}`}>
-      <img className="my-3" src={'http://localhost:5000/' + cover} alt="" />
+      <img className="my-3" src={'https://crud-miniwebproject-7340dd192120.herokuapp.com/' + cover} alt="" />
       </Link>
       <div className="flex flex-row justify-between">
         <p>{author.username}</p>

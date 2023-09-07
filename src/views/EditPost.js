@@ -37,7 +37,6 @@ export default function EditPost() {
       const response = await fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/post', {
         method: 'PUT',
         body: data,
-        headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
       });
       if (response.ok) {

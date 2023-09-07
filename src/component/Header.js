@@ -4,10 +4,11 @@ import { UserContext } from "../UserContext";
 
 
   export default function Header() {
-    const [setUserInfo,userInfo] = useContext(UserContext);
+    const {setUserInfo,userInfo} = useContext(UserContext);
     useEffect(() => {
       fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/profile', {
         credentials: 'include',
+        method: 'GET',
       }).then(response => {
         response.json().then(userInfo => {
           setUserInfo(userInfo);

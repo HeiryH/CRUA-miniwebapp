@@ -5,7 +5,7 @@ import { UserContext } from "../UserContext";
 export default function Header() {
   const {userInfo, setUserInfo} = useContext(UserContext)
   useEffect(() => {
-    fetch('http://localhost:5000/profile', {
+    fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/profile', {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -15,7 +15,7 @@ export default function Header() {
   }, [])
 
   function logOut() {
-    fetch('http://localhost:5000/logout', {
+    fetch('https://crud-miniwebproject-7340dd192120.herokuapp.comhttp://localhost:5000/logout', {
       credentials: 'include',
       method: 'POST'
     })

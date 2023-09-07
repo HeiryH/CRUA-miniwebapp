@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function PostPage(){
     const [ posts, setPosts ] = useState([]);
     useEffect(() => {
-        fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/post').then(response =>{
+        fetch('http://localhost:5000/post').then(response =>{
             response.json().then(posts =>{
                 setPosts(posts);
                 console.log(posts)

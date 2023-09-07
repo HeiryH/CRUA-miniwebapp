@@ -15,7 +15,7 @@ export default function Header() {
   }, [])
 
   function logOut() {
-    fetch('https://crud-miniwebproject-7340dd192120.herokuapp.comhttp://localhost:5000/logout', {
+    fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/logout', {
       credentials: 'include',
       method: 'POST'
     })

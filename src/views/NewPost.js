@@ -18,10 +18,9 @@ export default function NewPost() {
         data.set('content', content);
         data.set('file', files[0]);
         e.preventDefault();
-        const response = await fetch('http://localhost:5000/post', {
+        const response = await fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/post', {
           method: 'POST',
-          body: data,
-          credentials: 'include',
+          body: data
         });
         if (response.ok) {
           setRedirect(true);

@@ -2,17 +2,18 @@ import { Link } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../UserContext";
 
-export default function Header() {
-  const {userInfo, setUserInfo} = useContext(UserContext)
-  useEffect(() => {
-    fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/profile', {
-      credentials: 'include',
-    }).then(response => {
-      response.json().then(userInfo => {
-        setUserInfo(userInfo)
-      })
-    })
-  }, [])
+
+  export default function Header() {
+    const [setUserInfo,userInfo] = useContext(UserContext);
+    useEffect(() => {
+      fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/profile', {
+        credentials: 'include',
+      }).then(response => {
+        response.json().then(userInfo => {
+          setUserInfo(userInfo);
+        });
+      });
+    }, []);
 
   function logOut() {
     fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/logout', {

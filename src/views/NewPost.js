@@ -23,6 +23,7 @@ export default function NewPost() {
       const response = await fetch('https://crud-miniwebproject-7340dd192120.herokuapp.com/post', {
         method: 'POST',
         body: data,
+        headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
       });
       if (response.status === 200) {
